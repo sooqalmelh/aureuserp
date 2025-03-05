@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'sqlite'),
 
     /*
     |--------------------------------------------------------------------------
@@ -31,7 +31,7 @@ return [
 
     'connections' => [
 
-        'sqlite' => [
+        'mysql' => [
             'driver'                  => 'sqlite',
             'url'                     => env('DB_URL'),
             'database'                => env('DB_DATABASE', database_path('database.sqlite')),
@@ -42,7 +42,7 @@ return [
             'synchronous'             => null,
         ],
 
-        'mysql' => [
+        'sqlite' => [
             'driver'         => 'mysql',
             'url'            => env('DB_URL'),
             'host'           => env('DB_HOST', '127.0.0.1'),
